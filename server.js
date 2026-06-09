@@ -6,7 +6,11 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(
+	cors({
+		origin: 'https://ai-chat-one-rosy.vercel.app',
+	})
+);
 // app.use(cors({ origin: 'http://localhost:5173' }));
 // app.use(
 // 	cors({
