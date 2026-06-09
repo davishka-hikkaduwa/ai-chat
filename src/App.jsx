@@ -28,7 +28,7 @@ export default function App() {
 			});
 
 			const data = await res.json();
-			const aiMsg = { role: 'assistant', content: data.content[0].text };
+			const aiMsg = { role: 'assistant', content: data.text };
 			setMessages((prev) => [...prev, aiMsg]);
 		} catch (err) {
 			setMessages((prev) => [
